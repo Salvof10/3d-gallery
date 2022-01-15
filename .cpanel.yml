@@ -2,4 +2,4 @@
 deployment:
       tasks:
       - export DEPLOYPATH=/home/jlndedlj/test.lucamunarilartista.com/3d-gallery/dev/
-      - /bin cp -R /home/jlndedlj/repositories/3d-gallery-dev/ $DEPLOYPATH 
+      - /bin/cp -R /home/jlndedlj/repositories/3d-gallery-dev/ $DEPLOYPATH 
