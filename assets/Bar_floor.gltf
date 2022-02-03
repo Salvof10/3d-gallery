@@ -1,0 +1,152 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.6.16",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "extras" : {
+                "b_export" : 1,
+                "export_path" : "F:\\Programmi\\Blender2.93\\2.93\\Projects\\3d-gallery\\model\\a-frame\\export13\\",
+                "s_project_name" : "3d-gallery",
+                "b_settings" : 1,
+                "b_renderer" : 1,
+                "b_player" : 1,
+                "b_interactive" : 1,
+                "b_bake_lightmap" : 1,
+                "s_output" : "exporting...",
+                "b_use_lightmapper" : 0,
+                "b_show_env_sky" : 1,
+                "b_raycast" : 0,
+                "b_joystick" : 0,
+                "f_player_height" : 1,
+                "b_use_default_lights" : 0,
+                "b_physicallyCorrectLights" : 0,
+                "b_colorManagement" : 1,
+                "b_aa" : 1,
+                "b_stats" : 1,
+                "b_cast_shadows" : 1,
+                "b_cubemap" : 1,
+                "b_cubemap_background" : 1,
+                "b_camera_cube" : 1,
+                "s_showhide_object" : "Cube.001",
+                "s_toggle_object" : "{\"1\": \"Cube.001\", \"2\": \"Cube.002\"}",
+                "b_vr_controllers" : 0
+            },
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "extras" : {},
+            "mesh" : 0,
+            "name" : "Bar_floor",
+            "rotation" : [
+                0,
+                0.7071065902709961,
+                0,
+                -0.7071069478988647
+            ],
+            "scale" : [
+                3.3511579036712646,
+                1.1134635210037231,
+                2.4644224643707275
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.014",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TANGENT" : 2,
+                        "TEXCOORD_0" : 3
+                    },
+                    "indices" : 4
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 24,
+            "max" : [
+                0.9000000953674316,
+                0.07365524023771286,
+                1.3316655158996582
+            ],
+            "min" : [
+                -0.9000000953674316,
+                -0.07365524023771286,
+                -1.3316655158996582
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 36,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 288
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 384,
+            "byteOffset" : 576
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 192,
+            "byteOffset" : 960
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 72,
+            "byteOffset" : 1152
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1224,
+            "uri" : "data:application/octet-stream;base64,aGZmP4/Ylj0EdKq/aGZmP4/Ylj0EdKq/aGZmP4/Ylj0EdKq/aGZmP4/Ylr0EdKq/aGZmP4/Ylr0EdKq/aGZmP4/Ylr0EdKq/aGZmP4/Ylj0EdKo/aGZmP4/Ylj0EdKo/aGZmP4/Ylj0EdKo/aGZmP4/Ylr0EdKo/aGZmP4/Ylr0EdKo/aGZmP4/Ylr0EdKo/aGZmv4/Ylj0EdKq/aGZmv4/Ylj0EdKq/aGZmv4/Ylj0EdKq/aGZmv4/Ylr0EdKq/aGZmv4/Ylr0EdKq/aGZmv4/Ylr0EdKq/aGZmv4/Ylj0EdKo/aGZmv4/Ylj0EdKo/aGZmv4/Ylj0EdKo/aGZmv4/Ylr0EdKo/aGZmv4/Ylr0EdKo/aGZmv4/Ylr0EdKo/AAAAAAAAAIAAAIC/AAAAgAAAgD8AAACAAACAPwAAAIAAAACAAAAAgAAAgL8AAACAAAAAAAAAAIAAAIC/AACAPwAAAIAAAACAAAAAAAAAAAAAAIA/AAAAgAAAgD8AAACAAACAPwAAAIAAAACAAAAAgAAAgL8AAACAAAAAAAAAAAAAAIA/AACAPwAAAIAAAACAAACAvwAAAAAAAACAAAAAAAAAAIAAAIC/AAAAgAAAgD8AAACAAACAvwAAAAAAAACAAAAAgAAAgL8AAACAAAAAAAAAAIAAAIC/AACAvwAAAAAAAACAAAAAAAAAAAAAAIA/AAAAgAAAgD8AAACAAACAvwAAAAAAAACAAAAAgAAAgL8AAACAAAAAAAAAAAAAAIA/AAAAAAAAgL8AAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAAAAAACAvwAAAIAAAIC/AACAvwAAAAAAAACAAACAvwAAAAAAAIC/AAAAgAAAgL8AAAAAAACAvwAAAIAAAIC/AAAAAAAAgL8AAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAAAAAACAvwAAAIAAAIC/AACAvwAAAAAAAACAAACAvwAAAAAAAIC/AAAAgAAAgL8AAAAAAACAvwAAAIAAAIC/AAAAAAAAgL8AAACAAACAvwAAAAAAAIC/AAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AAAAAAAAgL8AAACAAACAvwAAgL8AAAAAAAAAgAAAgL8AAAAAAACAvwAAAIAAAIC/AAAAAAAAgL8AAACAAACAvwAAAAAAAIC/AAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AAAAAAAAgL8AAACAAACAvwAAgL8AAAAAAAAAgAAAgL8AAAAAAACAvwAAAIAAAIC/yoyaP8D+DT/hSNU+6PydP0Zukz/o/J0/5EjVPuj8nT9Qq6E/wP4NP8yMmj/o/J0/yoyaP8D+DT/eSNU+MDJqPkZukz84Mmo+4UjVPjgyaj5Qq6E/wP4NP8yMmj84Mmo+wE+MPzQyaj7KjJo/6PydP0Kthr7o/J0/Rm6TPzQyaj7CT4w/6PydP1CroT/o/J0/wE+MP+j8nT/KjJo/gOL/vUKthr4wMmo+Rm6TP+j8nT/AT4w/ODJqPlCroT+A4v+9AgAIAAsAAgALAAUABgATABcABgAXAAoAEgAMAA8AEgAPABUADQAAAAQADQAEABEABwABAA4ABwAOABQAFgAQAAMAFgADAAkA"
+        }
+    ]
+}

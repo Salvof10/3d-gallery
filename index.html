@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+    <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+    <head>
+        <title>WebXR Application</title>
+        <link rel="icon" type="image/png" href="favicon.ico"/>
+        <meta name="description" content="3D Application">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script type="text/javascript" src="js/webxr.js"></script>
+        <script type="text/javascript" src="js/joystick.js"></script>
+        <script type="text/javascript" src="js/camera-cube-env.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="init();">
+        <a-scene stats  shadow="type: pcfsoft; autoUpdate: true;" renderer="antialias: true; colorManagement: true; physicallyCorrectLights: false;">
+            <!-- Assets -->
+            <a-assets>
+				<a-asset-item id="Bar_Bottle_1" src="./assets/Bar_Bottle_1.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottle_2" src="./assets/Bar_Bottle_2.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottle_3" src="./assets/Bar_Bottle_3.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottle_4" src="./assets/Bar_Bottle_4.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottle_5" src="./assets/Bar_Bottle_5.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottle_Bottles_1" src="./assets/Bar_Bottle_Bottles_1.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottle_bottles_2" src="./assets/Bar_Bottle_bottles_2.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottle_bottles_3" src="./assets/Bar_Bottle_bottles_3.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottles_1" src="./assets/Bar_Bottles_1.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Bottles_2" src="./assets/Bar_Bottles_2.gltf"></a-asset-item>
+				<a-asset-item id="Bar_dishwasher" src="./assets/Bar_dishwasher.gltf"></a-asset-item>
+				<a-asset-item id="Bar_floor" src="./assets/Bar_floor.gltf"></a-asset-item>
+				<a-asset-item id="Bar_fridge" src="./assets/Bar_fridge.gltf"></a-asset-item>
+				<a-asset-item id="Bar_fridge_glass" src="./assets/Bar_fridge_glass.gltf"></a-asset-item>
+				<a-asset-item id="Bar_fridge_shelves" src="./assets/Bar_fridge_shelves.gltf"></a-asset-item>
+				<a-asset-item id="Bar_glass_shelves" src="./assets/Bar_glass_shelves.gltf"></a-asset-item>
+				<a-asset-item id="Bar_gplant" src="./assets/Bar_gplant.gltf"></a-asset-item>
+				<a-asset-item id="Bar_grass1" src="./assets/Bar_grass1.gltf"></a-asset-item>
+				<a-asset-item id="Bar_grass2" src="./assets/Bar_grass2.gltf"></a-asset-item>
+				<a-asset-item id="Bar_grass3" src="./assets/Bar_grass3.gltf"></a-asset-item>
+				<a-asset-item id="Bar_light" src="./assets/Bar_light.gltf"></a-asset-item>
+				<a-asset-item id="Bar_light2" src="./assets/Bar_light2.gltf"></a-asset-item>
+				<a-asset-item id="Bar_light3" src="./assets/Bar_light3.gltf"></a-asset-item>
+				<a-asset-item id="Bar_painting" src="./assets/Bar_painting.gltf"></a-asset-item>
+				<a-asset-item id="Bar_shelf1" src="./assets/Bar_shelf1.gltf"></a-asset-item>
+				<a-asset-item id="Bar_shelf2" src="./assets/Bar_shelf2.gltf"></a-asset-item>
+				<a-asset-item id="Bar_sink" src="./assets/Bar_sink.gltf"></a-asset-item>
+				<a-asset-item id="Bar_Structure" src="./assets/Bar_Structure.gltf"></a-asset-item>
+				<a-asset-item id="Bar_StructureExt" src="./assets/Bar_StructureExt.gltf"></a-asset-item>
+				<a-asset-item id="Bar_wall" src="./assets/Bar_wall.gltf"></a-asset-item>
+				<a-asset-item id="Bar_waterTap" src="./assets/Bar_waterTap.gltf"></a-asset-item>
+				<a-asset-item id="CentralRoof" src="./assets/CentralRoof.gltf"></a-asset-item>
+				<a-asset-item id="CentralStructure_columns" src="./assets/CentralStructure_columns.gltf"></a-asset-item>
+				<a-asset-item id="CentralStructure_littleColumn1.001" src="./assets/CentralStructure_littleColumn1.001.gltf"></a-asset-item>
+				<a-asset-item id="CheirsLittle1" src="./assets/CheirsLittle1.gltf"></a-asset-item>
+				<a-asset-item id="Floor" src="./assets/Floor.gltf"></a-asset-item>
+				<a-asset-item id="ImageBlueprint" src="./assets/ImageBlueprint.gltf"></a-asset-item>
+				<a-asset-item id="Plane" src="./assets/Plane.gltf"></a-asset-item>
+				<a-asset-item id="SM_BoXmenu" src="./assets/SM_BoXmenu.gltf"></a-asset-item>
+				<a-asset-item id="Wall_center" src="./assets/Wall_center.gltf"></a-asset-item>
+				<a-asset-item id="Wall_in_1" src="./assets/Wall_in_1.gltf"></a-asset-item>
+				<a-asset-item id="Wall_out" src="./assets/Wall_out.gltf"></a-asset-item>
+				<a-asset-item id="Walls_cheirs" src="./assets/Walls_cheirs.gltf"></a-asset-item>
+                <img id="sky"                 src="./resources/sky.jpg">
+                <img id="icon-play"           src="./resources/play.png">
+                <img id="icon-pause"          src="./resources/pause.png">
+                <img id="icon-play-skip-back" src="./resources/play-skip-back.png">
+                <img id="icon-mute"           src="./resources/mute.png">
+                <img id="icon-volume-low"     src="./resources/volume-low.png">
+                <img id="icon-volume-high"    src="./resources/volume-high.png">
+            </a-assets>
+
+            <!-- Entities -->
+            
+			<!--<a-entity id="#Bar_Bottle_1" gltf-model="#Bar_Bottle_1" scale="1 1 1" position="1.2088050842285156 -4.705875396728516 -33.731163024902344" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottle_2" gltf-model="#Bar_Bottle_2" scale="1 1 1" position="1.4457244873046875 -4.705875396728516 -33.731163024902344" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottle_3" gltf-model="#Bar_Bottle_3" scale="1 1 1" position="1.5587158203125 -4.705875396728516 -33.731163024902344" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottle_4" gltf-model="#Bar_Bottle_4" scale="1 1 1" position="1.7956371307373047 -4.705875396728516 -33.731163024902344" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottle_5" gltf-model="#Bar_Bottle_5" scale="1 1 1" position="1.9189949035644531 -4.705875396728516 -33.731163024902344" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottle_Bottles_1" gltf-model="#Bar_Bottle_Bottles_1" scale="1 1 1" position="1.4602088928222656 -3.772552490234375 -33.80731964111328" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottle_bottles_2" gltf-model="#Bar_Bottle_bottles_2" scale="1 1 1" position="1.5126762390136719 -4.152671813964844 -33.99799346923828" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottle_bottles_3" gltf-model="#Bar_Bottle_bottles_3" scale="1 1 1" position="1.5699634552001953 -3.3463611602783203 -33.80731964111328" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottles_1" gltf-model="#Bar_Bottles_1" scale="1 1 1" position="-0.8983345031738281 -1.184860348701477 -34.344032287597656" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Bottles_2" gltf-model="#Bar_Bottles_2" scale="1 1 1" position="-2.644166946411133 -1.9948959350585938 -34.344032287597656" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_dishwasher" gltf-model="#Bar_dishwasher" scale="1 1 1" position="0.5927982330322266 -4.296298980712891 -33.759864807128906" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_floor" gltf-model="#Bar_floor" scale="1 1 1" position="-0.1667003631591797 -5.38975715637207 -31.65488052368164" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_fridge" gltf-model="#Bar_fridge" scale="1 1 1" position="1.5688667297363281 -3.3979225158691406 -33.759132385253906" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_fridge_glass" gltf-model="#Bar_fridge_glass" scale="1 1 1" position="1.5894050598144531 -3.9942779541015625 -33.574684143066406" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_fridge_shelves" gltf-model="#Bar_fridge_shelves" scale="1 1 1" position="1.1657218933105469 -4.020366668701172 -33.956809997558594" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_glass_shelves" gltf-model="#Bar_glass_shelves" scale="1 1 1" position="1.5556793212890625 -3.9821395874023438 -33.57691192626953" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_gplant" gltf-model="#Bar_gplant" scale="1 1 1" position="2.21441650390625 -1.1823655366897583 -34.30402374267578" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_grass1" gltf-model="#Bar_grass1" scale="1 1 1" position="2.7106704711914062 -1.9423027038574219 -34.36432647705078" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_grass2" gltf-model="#Bar_grass2" scale="1 1 1" position="2.1835250854492188 -2.0815391540527344 -34.247169494628906" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_grass3" gltf-model="#Bar_grass3" scale="1 1 1" position="2.7135238647460938 -1.9963417053222656 -34.364891052246094" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_light" gltf-model="#Bar_light" scale="1 1 1" position="1.9787635803222656 0.6574876308441162 -33.771034240722656" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_light2" gltf-model="#Bar_light2" scale="1 1 1" position="-0.09975242614746094 0.6574876308441162 -33.771034240722656" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_light3" gltf-model="#Bar_light3" scale="1 1 1" position="-2.2111663818359375 0.6574876308441162 -33.771034240722656" visible="true" shadow="cast: true" ></a-entity>-->
+			<a-entity id="#Bar_painting" gltf-model="#Bar_painting" scale="1 1 1" position="2.4432601928710938 -2.015035629272461 -34.472633361816406" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_shelf1" gltf-model="#Bar_shelf1" scale="1 1 1" position="-0.16317154467105865 -2.3054237365722656 -34.42530059814453" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_shelf2" gltf-model="#Bar_shelf2" scale="1 1 1" position="-0.16317154467105865 -1.5635720491409302 -34.42530059814453" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_sink" gltf-model="#Bar_sink" scale="1 1 1" position="-1.300323486328125 -4.249868392944336 -31.064533233642578" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_Structure" gltf-model="#Bar_Structure" scale="1 1 1" position="-0.47153282165527344 -4.690248489379883 -32.1037483215332" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_StructureExt" gltf-model="#Bar_StructureExt" scale="1 1 1" position="1.2341976165771484 -4.524675369262695 -30.980077743530273" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_wall" gltf-model="#Bar_wall" scale="1 1 1" position="-0.17557716369628906 -2.1874923706054688 -34.713966369628906" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Bar_waterTap" gltf-model="#Bar_waterTap" scale="1 1 1" position="-1.3009185791015625 -3.9448699951171875 -30.626758575439453" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#CentralRoof" gltf-model="#CentralRoof" scale="1 1 1" position="-0.3078744113445282 10.117624282836914 -27.387325286865234" visible="true" shadow="cast: true"  geometry="" camera-cube-env="distance: 500; resolution: 512; repeat: true; interval: 400" ></a-entity>
+			<a-entity id="#CentralStructure_columns" gltf-model="#CentralStructure_columns" scale="1 1 1" position="-0.3494780659675598 2.2753524780273438 -27.462078094482422" visible="true" shadow="cast: true"  geometry="" camera-cube-env="distance: 500; resolution: 512; repeat: true; interval: 400" ></a-entity>
+			<a-entity id="#CentralStructure_littleColumn1.001" gltf-model="#CentralStructure_littleColumn1.001" scale="1 1 1" position="-0.6995663046836853 -8.538339614868164 -10.869760513305664" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#CheirsLittle1" gltf-model="#CheirsLittle1" scale="1 1 1" position="-3.01031756401062 -12.47085189819336 -28.33125877380371" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Floor" gltf-model="#Floor" scale="1 1 1" position="-2.7307188510894775 -13.247112274169922 -40.517967224121094" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#ImageBlueprint"  scale="1 1 1" position="0.0 0.0 -0.0" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane" gltf-model="#Plane" scale="1 1 1" position="-2.6624906063079834 16.589845657348633 -46.47874069213867" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#SM_BoXmenu" gltf-model="#SM_BoXmenu" scale="1 1 1" position="-0.1572418212890625 0.2097470760345459 -34.091651916503906" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Wall_center" gltf-model="#Wall_center" scale="1 1 1" position="-4.043614387512207 -10.209213256835938 -17.82454490661621" visible="true" shadow="cast: true"  geometry="" camera-cube-env="distance: 500; resolution: 512; repeat: true; interval: 400" ></a-entity>
+			<a-entity id="#Wall_in_1" gltf-model="#Wall_in_1" scale="1 1 1" position="-2.8208789825439453 -8.945183753967285 -46.059017181396484" visible="true" shadow="cast: true"  geometry="" camera-cube-env="distance: 500; resolution: 512; repeat: true; interval: 400" ></a-entity>
+			<a-entity id="#Wall_out" gltf-model="#Wall_out" scale="1 1 1" position="-2.7466351985931396 2.608644962310791 -55.80389404296875" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Walls_cheirs" gltf-model="#Walls_cheirs" scale="1 1 1" position="-2.4899959564208984 -1.9306905269622803 -45.97189712524414" visible="true" shadow="cast: true" ></a-entity>
+
+            <!-- Camera -->
+            <a-entity id="player" 
+                position="0 -0.2 0" 
+                movement-controls="speed: 1;fly:true;">
+                <a-entity id="camera" 
+                    camera="near: 0.001" 
+                    position="0 1.0 0" 
+                    look-controls="pointerLockEnabled: true">
+                        <a-entity id="cursor" cursor="fuse: false;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
+                            position="0 0 -0.1"
+                            geometry="primitive: circle; radius: 0.001;"
+                            material="color: #CCC; shader: flat;"
+                            >
+                        </a-entity>
+                </a-entity>
+                    
+            </a-entity>
+
+            <!-- Lights -->
+            
+			<a-entity position="-22.703824996948242 1.0209119319915771 -10.535263061523438" light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="-23.460235595703125 1.0209119319915771 -47.59942626953125" light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="13.036613464355469 1.0209119319915771 -47.59942626953125" light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="15.30584716796875 1.0209119319915771 -10.157058715820312" light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+
+            <!-- Sky -->
+            <a-sky src="#sky" material="" geometry="" rotation="0 90 0"></a-sky>
+        </a-scene>
+    </body>
+</html>
+<!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
